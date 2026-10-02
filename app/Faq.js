@@ -26,7 +26,7 @@ const questions = [
   {
     question: "What services do you offer?",
     answer:
-      "Website development, UI/UX design in Figma and landing pages — from design to a live, responsive site.",
+      "Product design for mobile apps, UX for web apps and SaaS dashboards, and design systems — from wireframes to dev-ready Figma files.",
   },
   {
     question: "How can I hire you?",
@@ -36,17 +36,22 @@ const questions = [
   {
     question: "What is your working process?",
     answer:
-      "Four simple steps: discover your goals, plan the strategy, design the UI in Figma, then build, test and deliver.",
+      "Four simple steps: research the users and their workflows, map the flows and structure, design and prototype in Figma, then hand off dev-ready files.",
   },
   {
-    question: "How long does a project take?",
+    question: "Which industries have you worked in?",
     answer:
-      "A typical website takes around two to three weeks, depending on its size and how quickly feedback comes in.",
+      "B2B SaaS, EdTech, ERP and eCommerce — including a school management platform, a garments ERP app and a WordPress eCommerce plugin.",
   },
   {
     question: "Which tools do you use?",
     answer:
-      "JavaScript, React, HTML5, CSS3 and Tailwind for building, Figma for design, and Git and Node.js for workflow.",
+      "Figma — Auto Layout, components, variables and prototyping — along with FigJam and AI-assisted design tools.",
+  },
+  {
+    question: "Do you design in Bangla and English?",
+    answer:
+      "Yes. Bangla is my native language and I work professionally in English, and I've designed bilingual interfaces and print templates in both.",
   },
 ];
 

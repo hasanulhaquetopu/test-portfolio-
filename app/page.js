@@ -24,60 +24,137 @@ const navLinks = [
 ];
 
 const stats = [
-  { value: "15+", label: "Projects done" },
-  { value: "2+", label: "Years learning" },
-  { value: "10+", label: "Happy clients" },
+  { value: "1+", label: "Years experience" },
+  { value: "6", label: "Projects designed" },
+  { value: "4", label: "Industries" },
 ];
 
-const roles = ["WEB DEVELOPER", "UI DESIGNER", "FRONTEND ENGINEER"];
+const roles = ["PRODUCT DESIGNER", "UI/UX DESIGNER", "DESIGN SYSTEMS"];
 
 const about =
-  "I'm a JavaScript developer and designer from Bangladesh. I help people and brands turn ideas into modern websites — from the first Figma sketch to a fast, responsive, accessible product in the browser.";
+  "I'm a product and UX designer from Dhaka, Bangladesh, with 1+ year of experience designing B2B SaaS, EdTech, ERP and eCommerce products. I turn dense workflows into clear, consistent interfaces in Figma, build scalable design systems, and work closely with developers from wireframe to handoff.";
 
 const works = [
-  { title: "Weather Dashboard", chip: "Web App", art: "weather", gradient: "linear-gradient(90deg, #ff8a5b, #dd360e)" },
-  { title: "Task Manager", chip: "React App", art: "tasks", gradient: "linear-gradient(90deg, #2e2e2e, #080808)" },
-  { title: "Shop Landing Page", chip: "UI Design", art: "shop", gradient: "linear-gradient(90deg, #f2c94c, #f2994a)" },
-  { title: "Portfolio Kit", chip: "Figma System", art: "kit", gradient: "linear-gradient(90deg, #9ad1d4, #4a90a4)" },
+  {
+    title: "Sohojogi",
+    chip: "EdTech",
+    art: "tasks",
+    gradient: "linear-gradient(90deg, #2e2e2e, #080808)",
+    href: "https://sohojogi.srcdrive.com/bn",
+  },
+  {
+    title: "EasyCommerce",
+    chip: "B2B SaaS",
+    art: "shop",
+    gradient: "linear-gradient(90deg, #f2c94c, #f2994a)",
+    href: "https://easycommerce.dev/",
+  },
+  {
+    title: "ERP Mobile App",
+    chip: "Approvals",
+    art: "erp",
+    gradient: "linear-gradient(90deg, #ff8a5b, #dd360e)",
+    href: "https://www.figma.com/design/kS2okb1WLPVZNQmIz357yu/Untitled?node-id=0-1&t=mlswjkWb3Y3JRAQq-1",
+  },
+  {
+    title: "Garments PLM",
+    chip: "Web App",
+    art: "kit",
+    gradient: "linear-gradient(90deg, #9ad1d4, #4a90a4)",
+    href: "https://www.figma.com/design/Aif0pAXSFxVIrQ6oxdAtb5/PLM-Design?node-id=0-1&t=vZfzgvbw0aPqz3S3-1",
+  },
 ];
+
+const resume = [
+  {
+    number: "01",
+    date: "Apr 2026 – Present",
+    title: "PRODUCT DESIGNER",
+    place: "SrcDrive",
+    href: "https://srcdrive.com/",
+    note: "Part-time",
+    text: "Designed the teacher, student and parent mobile apps for Sohojogi, a school management platform used by schools, colleges and madrasas in Bangladesh, and now shaping the UX of its web apps. Also designed an executive companion app for a garments ERP and early concepts for a garments PLM system.",
+  },
+  {
+    number: "02",
+    date: "Sep 2025 – May 2026",
+    title: "UI/UX DESIGNER",
+    place: "Codexpert Inc.",
+    href: "https://codexpert.io/",
+    text: "Redesigned the EasyCommerce v1.20 dashboard and designed its v1.30 reports module with interactive charts, geo-mapping and order insights. Improved store-builder workflows in CoDesigner and redesigned the Codexpert Services page, working with developers and product managers from wireframes to dev-ready Figma handoff.",
+  },
+  {
+    number: "03",
+    date: "2023 – 2026",
+    title: "B.SC. IN COMPUTER SCIENCE & ENGINEERING",
+    place: "European University of Bangladesh",
+    text: "CGPA 3.60 / 4.00",
+  },
+  {
+    number: "04",
+    date: "2018 – 2022",
+    title: "DIPLOMA IN ELECTRICAL ENGINEERING",
+    place: "Pabna Textile Engineering College",
+    text: "GPA 3.49 / 4.00",
+  },
+];
+
+const courses = {
+  ostad: "https://drive.google.com/file/d/1am7zRfDMVBtz_pKJIFYN-lN4rmqylvKO/view",
+  grameenphone: "https://www.grameenphone.academy/cert/d99150a5cf35",
+};
 
 const services = [
   {
     number: "01",
-    title: "WEB DEVELOPMENT",
-    text: "Responsive, fast websites built with modern JavaScript, React and clean code.",
-    tags: ["HTML/CSS", "JavaScript", "React"],
+    title: "PRODUCT DESIGN",
+    text: "Mobile apps designed end to end, from the first user flows to dev-ready Figma files.",
+    tags: ["Mobile Apps", "User Flows", "Prototyping"],
   },
   {
     number: "02",
-    title: "UI/UX DESIGN",
-    text: "User-focused interfaces and prototypes designed in Figma, ready for developers.",
-    tags: ["Figma", "Wireframes", "Prototypes"],
+    title: "WEB APP & SAAS UX",
+    text: "Admin consoles, analytics dashboards and other complex web apps made clear and consistent.",
+    tags: ["Dashboards", "B2B SaaS", "Responsive"],
   },
   {
     number: "03",
-    title: "LANDING PAGES",
-    text: "High-converting landing pages for products, portfolios and small businesses.",
-    tags: ["Webflow", "Tailwind", "SEO"],
+    title: "DESIGN SYSTEMS",
+    text: "Scalable design systems in Figma, built on components and variables for a clean developer handoff.",
+    tags: ["Components", "Variables", "Auto Layout"],
   },
 ];
 
 const steps = [
-  { number: "01", days: "3 Days", title: "DISCOVER", icon: "discover", text: "Understand your goals, audience and requirements." },
-  { number: "02", days: "4 Days", title: "STRATEGY", icon: "strategy", text: "Plan structure, content and the right tech stack." },
-  { number: "03", days: "5 Days", title: "DESIGN", icon: "design", text: "Craft the UI in Figma and refine it with your feedback." },
-  { number: "04", days: "3 Days", title: "DELIVERY", icon: "delivery", text: "Build, test and launch a fast, polished website." },
+  { number: "01", tag: "Research", title: "DISCOVER", icon: "discover", text: "User research to understand the people, goals and workflows behind the product." },
+  { number: "02", tag: "Flows & IA", title: "STRUCTURE", icon: "strategy", text: "User flows and information architecture that make complex tasks simple." },
+  { number: "03", tag: "Figma", title: "DESIGN", icon: "design", text: "Wireframes, prototypes and polished UI, refined through usability testing." },
+  { number: "04", tag: "Dev-ready", title: "HANDOFF", icon: "delivery", text: "Dev-ready Figma files and close work with developers through to release." },
 ];
 
-const skills = ["JAVASCRIPT", "REACT", "FIGMA", "HTML5", "CSS3", "TAILWIND", "NODE.JS", "GIT"];
+const skills = [
+  "FIGMA",
+  "FIGJAM",
+  "DESIGN SYSTEMS",
+  "PROTOTYPING",
+  "WIREFRAMING",
+  "USER RESEARCH",
+  "USER FLOWS",
+  "USABILITY TESTING",
+];
 
-const socials = ["GitHub", "LinkedIn", "Dribbble", "Behance"];
+const socials = [
+  { label: "Dribbble", href: "https://dribbble.com/hasanul-haque-topu" },
+  { label: "LinkedIn", href: "https://linkedin.com/in/topu-614a01380" },
+];
 
 const email = "hasanulhaque100@gmail.com";
 
-function Button({ href, variant = "dark", children }) {
+const cv = "/Hasanul_Haque_Topu_CV.pdf";
+
+function Button({ href, variant = "dark", children, ...props }) {
   return (
-    <a href={href} className={`${styles.button} ${styles[variant]}`} data-magnetic>
+    <a href={href} className={`${styles.button} ${styles[variant]}`} data-magnetic {...props}>
       <span className={styles.buttonLabel}>{children}</span>
       <ArrowSwap />
     </a>
@@ -153,14 +230,14 @@ export default function Home() {
               <Scribble />
             </h1>
             <p className={styles.heroLead}>
-              I design and build thoughtful digital experiences — clean
-              interfaces, fast websites and products people enjoy using.
+              I design mobile apps end to end and shape the UX of complex web
+              apps — turning dense workflows into clear, consistent interfaces.
             </p>
             <div className={styles.ctas}>
               <Button href="#contact" variant="accent">
                 LET&apos;S TALK
               </Button>
-              <Button href="#contact" variant="outline">
+              <Button href={cv} variant="outline" download>
                 DOWNLOAD CV
               </Button>
             </div>
@@ -217,7 +294,7 @@ export default function Home() {
           <Words text={about} />
         </p>
         <div data-reveal="up">
-          <Button href="#services">LEARN MORE ABOUT ME</Button>
+          <Button href="#experience">LEARN MORE ABOUT ME</Button>
         </div>
       </section>
 
@@ -230,14 +307,27 @@ export default function Home() {
             </h2>
           </div>
           <div data-reveal="up">
-            <Button href="#projects" variant="outline">
+            <Button
+              href="https://dribbble.com/hasanul-haque-topu"
+              variant="outline"
+              target="_blank"
+              rel="noreferrer"
+            >
               VIEW ALL PROJECTS
             </Button>
           </div>
         </div>
         <div className={styles.grid}>
           {works.map((work, i) => (
-            <article key={work.title} className={styles.work} data-reveal="up" style={{ "--i": i }}>
+            <a
+              key={work.title}
+              href={work.href}
+              target="_blank"
+              rel="noreferrer"
+              className={styles.work}
+              data-reveal="up"
+              style={{ "--i": i }}
+            >
               <div
                 className={styles.workImage}
                 style={{ backgroundImage: work.gradient }}
@@ -251,6 +341,50 @@ export default function Home() {
                 <h3 className={styles.workTitle}>{work.title}</h3>
                 <span className={styles.chip}>{work.chip}</span>
               </div>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section className={styles.section} id="experience">
+        <div className={styles.sectionHeader}>
+          <div className={styles.heading}>
+            <Eyebrow>RESUME</Eyebrow>
+            <h2 className={styles.title} data-reveal="lines">
+              <Lines lines={["EXPERIENCE", "& EDUCATION"]} />
+            </h2>
+          </div>
+          <p className={styles.headerNote} data-reveal="up">
+            Also trained in UI/UX Design at{" "}
+            <a href={courses.ostad} target="_blank" rel="noreferrer">
+              Ostad
+            </a>{" "}
+            and Design Systems at{" "}
+            <a href={courses.grameenphone} target="_blank" rel="noreferrer">
+              Grameenphone Academy
+            </a>
+            .
+          </p>
+        </div>
+        <div className={styles.resume}>
+          {resume.map((item, i) => (
+            <article key={item.number} className={styles.step} data-reveal="up" style={{ "--i": i }}>
+              <div className={styles.cardTop}>
+                <p className={styles.stepNumber}>{item.number}</p>
+                <span className={styles.chip}>{item.date}</span>
+              </div>
+              <h3 className={styles.stepTitle}>{item.title}</h3>
+              <p className={styles.stepPlace}>
+                {item.href ? (
+                  <a href={item.href} target="_blank" rel="noreferrer">
+                    {item.place}
+                  </a>
+                ) : (
+                  item.place
+                )}
+                {item.note && ` · ${item.note}`}
+              </p>
+              <p className={styles.stepText}>{item.text}</p>
             </article>
           ))}
         </div>
@@ -312,7 +446,7 @@ export default function Home() {
             <article key={step.number} className={styles.step} data-reveal="up" style={{ "--i": i }}>
               <div className={styles.cardTop}>
                 <p className={styles.stepNumber}>{step.number}</p>
-                <span className={styles.chip}>{step.days}</span>
+                <span className={styles.chip}>{step.tag}</span>
               </div>
               <div className={styles.cardTop}>
                 <h3 className={styles.stepTitle}>{step.title}</h3>
@@ -379,8 +513,8 @@ export default function Home() {
                 HASANUL<span className={styles.accent}>.</span>
               </a>
               <p className={styles.brandText}>
-                Web developer &amp; UI designer crafting clean digital
-                experiences.
+                Product &amp; UI/UX designer in Dhaka, Bangladesh, turning
+                complex workflows into clear interfaces.
               </p>
             </div>
             <div className={styles.footerCol}>
@@ -394,8 +528,8 @@ export default function Home() {
             <div className={styles.footerCol}>
               <p className={styles.footerColTitle}>SOCIAL</p>
               {socials.map((social) => (
-                <a key={social} href="#contact">
-                  {social}
+                <a key={social.label} href={social.href} target="_blank" rel="noreferrer">
+                  {social.label}
                 </a>
               ))}
             </div>

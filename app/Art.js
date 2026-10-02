@@ -76,7 +76,7 @@ export function SpinBadge() {
         />
         <text className={styles.badgeText}>
           <textPath href="#badge-circle" textLength="318">
-            WEB DEVELOPER • UI DESIGNER • OPEN TO WORK •
+            PRODUCT DESIGNER • UI/UX • OPEN TO WORK •
           </textPath>
         </text>
       </g>
@@ -144,9 +144,7 @@ export function StepIcon({ kind }) {
   );
 }
 
-const rays = [0, 45, 90, 135, 180, 225, 270, 315];
-
-function WeatherArt() {
+function ErpArt() {
   return (
     <g className={styles.artPanel}>
       <rect
@@ -161,22 +159,23 @@ function WeatherArt() {
         strokeOpacity=".55"
         strokeWidth="1.5"
       />
-      <g className={styles.artSpin} stroke="#fff" strokeWidth="2.5" strokeLinecap="round">
-        {rays.map((angle) => (
-          <path key={angle} d="M88 114v-7" transform={`rotate(${angle} 88 136)`} />
-        ))}
-      </g>
-      <circle cx="88" cy="136" r="13" fill="none" stroke="#fff" strokeWidth="2.5" />
-      <g className={styles.artDrift} fill="#fff">
-        <circle cx="100" cy="153" r="10" />
-        <circle cx="114" cy="146" r="14" />
-        <circle cx="128" cy="154" r="9" />
-        <rect x="100" y="150" width="28" height="13" />
-      </g>
-      <text className={styles.artBig} x="244" y="154" textAnchor="end" fill="#fff">
-        24°
-      </text>
-      <rect x="200" y="164" width="44" height="6" rx="3" fill="#fff" fillOpacity=".6" />
+      <rect x="58" y="108" width="84" height="10" rx="5" fill="#fff" fillOpacity=".9" />
+      <rect x="58" y="126" width="52" height="6" rx="3" fill="#fff" fillOpacity=".5" />
+      <circle cx="226" cy="120" r="16" fill="#fff" />
+      <path
+        className={styles.draw}
+        pathLength="1"
+        d="M219 120.5l5 5 9-10"
+        fill="none"
+        stroke="#dd360e"
+        strokeWidth="2.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <rect x="56" y="150" width="188" height="36" rx="12" fill="#fff" fillOpacity=".18" />
+      <rect x="70" y="161" width="70" height="6" rx="3" fill="#fff" fillOpacity=".9" />
+      <rect x="70" y="172" width="44" height="5" rx="2.5" fill="#fff" fillOpacity=".5" />
+      <rect className={styles.artCta} x="188" y="159" width="44" height="18" rx="9" fill="#fff" />
       <path
         d="M56 250C74 250 82 222 100 222S126 242 146 238 172 200 192 202 226 226 244 210V276H56Z"
         fill="#fff"
@@ -404,7 +403,7 @@ function KitArt() {
 }
 
 const workArts = {
-  weather: WeatherArt,
+  erp: ErpArt,
   tasks: TasksArt,
   shop: ShopArt,
   kit: KitArt,

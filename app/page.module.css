@@ -236,6 +236,13 @@
   line-height: 1.55;
 }
 
+.headerNote a {
+  color: var(--ink);
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .grid {
   display: flex;
   gap: 24px;
@@ -669,16 +676,6 @@
   font-weight: 600;
 }
 
-.artSpin {
-  transform-box: fill-box;
-  transform-origin: center;
-  animation: spin 14s linear infinite;
-}
-
-.artDrift {
-  animation: drift 4.5s ease-in-out infinite alternate;
-}
-
 .artPing {
   transform-box: fill-box;
   transform-origin: center;
@@ -994,6 +991,25 @@
   font-size: 16px;
   line-height: 1.6;
   transition: color 0.5s ease;
+}
+
+/* Experience (reuses the process cards) */
+
+.resume {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.stepPlace {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.stepPlace a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 /* Skills marquee */
@@ -1398,16 +1414,6 @@
   }
 }
 
-@keyframes drift {
-  from {
-    translate: -4px 0;
-  }
-
-  to {
-    translate: 9px 0;
-  }
-}
-
 @keyframes bob {
   from {
     translate: 0 0;
@@ -1612,6 +1618,10 @@
   .work,
   .step {
     flex-basis: 100%;
+  }
+
+  .resume {
+    grid-template-columns: 1fr;
   }
 
   .ctas,

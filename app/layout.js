@@ -15,7 +15,7 @@ const anton = Anton({
 export const metadata = {
   title: "Hasanul Haque Topu — Portfolio",
   description:
-    "Web developer & UI designer crafting clean digital experiences.",
+    "Product & UI/UX designer — mobile apps, SaaS dashboards and design systems.",
 };
 
 export default function RootLayout({ children }) {
