@@ -4,7 +4,6 @@ import "./globals.css";
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
   subsets: ["latin"],
-  style: ["normal", "italic"],
 });
 
 const bebas = Bebas_Neue({

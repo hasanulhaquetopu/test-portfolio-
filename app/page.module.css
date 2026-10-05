@@ -517,12 +517,14 @@
   position: relative;
   overflow: clip;
   padding: var(--section) 0;
-  background: linear-gradient(180deg, #f51c08 0%, #ff3d0e 45%, #ff6d1c 100%);
+  background:
+    radial-gradient(34% 36% at 50% 46%, rgba(255, 196, 130, 0.6), transparent 72%),
+    linear-gradient(180deg, #f51c08 0%, #ff3d0e 45%, #ff6d1c 100%);
   color: #fff;
 }
 
-/* The portrait is multiplied onto the gradient, so its pale backdrop
-   disappears and the figure picks up the hero's colour. */
+/* A cut-out portrait in its own colours, standing on the hero's bottom edge
+   with a warm glow behind it and a light shadow to lift it off the page. */
 .heroPhoto {
   position: absolute;
   top: calc(var(--section) + 11vw);
@@ -530,10 +532,7 @@
   left: 50%;
   aspect-ratio: 701 / 801;
   transform: translateX(-50%);
-  filter: grayscale(1) contrast(1.15) brightness(1.12);
-  mix-blend-mode: multiply;
-  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
-  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.12)) drop-shadow(0 24px 48px rgba(0, 0, 0, 0.2));
 }
 
 .heroPhoto img {
@@ -662,8 +661,7 @@
 /* About */
 
 .about {
-  overflow: clip;
-  padding: var(--section) 0;
+  padding-top: var(--section);
 }
 
 .aboutHeader {
@@ -671,7 +669,6 @@
   justify-content: space-between;
   align-items: center;
   gap: 40px;
-  margin-bottom: var(--section);
 }
 
 .caption {
@@ -701,33 +698,6 @@
   letter-spacing: -0.01em;
 }
 
-/* Words darken one by one as the heading scrolls up the screen. */
-.page[data-motion="on"] .word {
-  opacity: clamp(0.28, var(--p) * (var(--n) + 3) - var(--i), 1);
-}
-
-.aboutActions {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 20px 32px;
-}
-
-.aboutNote {
-  max-width: 34ch;
-  font-size: 16px;
-}
-
-.aboutNote a {
-  color: var(--ink);
-  font-weight: 600;
-  border-bottom: 1px solid currentColor;
-}
-
-.aboutNote a:hover {
-  color: var(--red);
-}
-
 .pattern {
   flex: none;
   width: 100%;
@@ -745,6 +715,37 @@
   from {
     transform: scale(0.9);
   }
+}
+
+/* Journey: experience and education, newest first. */
+
+.journey {
+  overflow: clip;
+  padding: var(--section) 0;
+}
+
+.journeyHeader {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px 40px;
+  margin-bottom: calc(var(--section) / 2);
+}
+
+.journeyNote {
+  max-width: 34ch;
+  font-size: 16px;
+}
+
+.journeyNote a {
+  color: var(--ink);
+  font-weight: 600;
+  border-bottom: 1px solid currentColor;
+}
+
+.journeyNote a:hover {
+  color: var(--red);
 }
 
 /* Timeline. Without motion it is a plain sideways-scrolling row; with it,
@@ -1642,7 +1643,7 @@
 
 .faq {
   overflow: clip;
-  padding-bottom: var(--section);
+  padding-top: var(--section);
 }
 
 .fan {
@@ -1963,17 +1964,26 @@
     display: none;
   }
 
-  /* The text moves below the face, onto the jacket and a shaded lower half. */
-  .hero::after {
-    content: "";
-    position: absolute;
-    inset: 45% 0 0;
-    background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.55));
-    pointer-events: none;
+  /* The portrait sits under the name and fades out at the chest, and the
+     text follows below it instead of running across it. */
+  .hero {
+    --photo: min(92vw, 560px);
+
+    background:
+      radial-gradient(60% 30% at 50% 30%, rgba(255, 196, 130, 0.6), transparent 72%),
+      linear-gradient(180deg, #f51c08 0%, #ff3d0e 45%, #ff6d1c 100%);
+  }
+
+  .heroPhoto {
+    top: calc(var(--section) + 9vw);
+    bottom: auto;
+    width: var(--photo);
+    -webkit-mask-image: linear-gradient(180deg, #000 58%, transparent 88%);
+    mask-image: linear-gradient(180deg, #000 58%, transparent 88%);
   }
 
   .heroTitle {
-    margin-bottom: 64vw;
+    margin-bottom: calc(var(--photo) - 5vw);
   }
 
   .heroContent {
@@ -2127,14 +2137,6 @@
   .tagFaq {
     top: 62%;
     left: 2%;
-  }
-
-  .heroTitle {
-    margin-bottom: 76vw;
-  }
-
-  .heroPhoto {
-    top: calc(var(--section) + 10vw);
   }
 
   .heroContent {

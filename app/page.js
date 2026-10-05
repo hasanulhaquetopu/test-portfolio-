@@ -37,9 +37,9 @@ const navLinks = [
 const pageLinks = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
-  { label: "Process", href: "#process" },
   { label: "Works", href: "#works" },
   { label: "Services", href: "#services" },
+  { label: "Process", href: "#process" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -49,27 +49,21 @@ const socials = [
 ];
 
 const about =
-  "I’M A PRODUCT & UX DESIGNER FROM DHAKA, TURNING DENSE WORKFLOWS INTO CLEAR, CONSISTENT INTERFACES";
+  "I’M A PRODUCT & UI/UX DESIGNER FROM DHAKA, TURNING DENSE WORKFLOWS INTO CLEAR, CONSISTENT INTERFACES";
 
 const courses = {
   ostad: "https://drive.google.com/file/d/1am7zRfDMVBtz_pKJIFYN-lN4rmqylvKO/view",
   grameenphone: "https://www.grameenphone.academy/cert/d99150a5cf35",
 };
 
+// Newest first, so the work comes before the education.
 const timeline = [
   {
-    year: "2018",
-    tag: "DIPLOMA",
-    color: "#ff8f64",
-    art: "book",
-    text: "Started a Diploma in Electrical Engineering at Pabna Textile Engineering College, finishing in 2022 with a GPA of 3.49 / 4.00.",
-  },
-  {
-    year: "2023",
-    tag: "B.SC. IN CSE",
-    color: "#dba9ff",
-    art: "lines",
-    text: "Began a B.Sc. in Computer Science & Engineering at European University of Bangladesh, running to 2026 with a CGPA of 3.60 / 4.00.",
+    year: "2026",
+    tag: "SRCDRIVE",
+    color: "#ffcb68",
+    art: "sun",
+    text: "Product Designer at SrcDrive since Apr 2026, part-time: the Sohojogi teacher, student and parent apps, an executive app for a garments ERP and early concepts for a garments PLM system.",
   },
   {
     year: "2025",
@@ -79,11 +73,18 @@ const timeline = [
     text: "Joined Codexpert Inc. as a UI/UX Designer (Sep 2025 – May 2026): redesigned the EasyCommerce dashboard, designed its reports module and improved CoDesigner’s store-builder workflows.",
   },
   {
-    year: "2026",
-    tag: "SRCDRIVE",
-    color: "#ffcb68",
-    art: "sun",
-    text: "Product Designer at SrcDrive since Apr 2026, part-time: the Sohojogi teacher, student and parent apps, an executive app for a garments ERP and early concepts for a garments PLM system.",
+    year: "2023",
+    tag: "B.SC. IN CSE",
+    color: "#dba9ff",
+    art: "lines",
+    text: "Began a B.Sc. in Computer Science & Engineering at European University of Bangladesh, running to 2026 with a CGPA of 3.60 / 4.00.",
+  },
+  {
+    year: "2018",
+    tag: "DIPLOMA",
+    color: "#ff8f64",
+    art: "book",
+    text: "Started a Diploma in Electrical Engineering at Pabna Textile Engineering College, finishing in 2022 with a GPA of 3.49 / 4.00.",
   },
 ];
 
@@ -165,7 +166,7 @@ const services = [
     art: "flower",
   },
   {
-    title: "WEB APP & SAAS UX",
+    title: "WEB APP & SAAS UI/UX",
     text: "Admin consoles, analytics dashboards and other complex web apps made clear and consistent.",
     tags: ["Dashboards", "B2B SaaS", "Admin Consoles", "Analytics", "Responsive"],
     art: "screen",
@@ -333,7 +334,8 @@ export default function Home() {
             src="/v3/photo.png"
             alt="Hasanul Haque Topu"
             fill
-            sizes="(max-width: 767px) 160vw, 800px"
+            sizes="(max-width: 991px) 92vw, 52vw"
+            quality={90}
             preload
           />
         </div>
@@ -346,7 +348,7 @@ export default function Home() {
               <span>PRODUCT &amp;</span> <span>UI/UX DESIGNER</span>
             </h2>
             <p className={styles.heroInfo}>
-              I design mobile apps end to end and shape the UX of complex web apps — turning
+              I design mobile apps end to end and shape the UI/UX of complex web apps — turning
               dense workflows into clear, consistent interfaces.
             </p>
           </div>
@@ -369,112 +371,14 @@ export default function Home() {
             <div className={styles.aboutLeft}>
               <div className={styles.caption}>
                 <span className={styles.captionDot} />
-                <p className={styles.captionText}>
-                  About <em>(the)</em> Designer
-                </p>
+                <p className={styles.captionText}>About the Designer</p>
               </div>
-              <h2
-                className={styles.aboutTitle}
-                data-scroll="enter"
-                style={{ "--n": about.split(" ").length }}
-              >
-                {about.split(" ").map((word, i) => (
-                  <Fragment key={i}>
-                    <span className={styles.word} style={{ "--i": i }}>
-                      {word}
-                    </span>{" "}
-                  </Fragment>
-                ))}
-              </h2>
-              <div className={styles.aboutActions}>
-                <Button href={cv} download>
-                  DOWNLOAD CV
-                </Button>
-                <p className={styles.aboutNote}>
-                  Also trained in UI/UX Design at{" "}
-                  <a href={courses.ostad} target="_blank" rel="noreferrer">
-                    Ostad
-                  </a>{" "}
-                  and Design Systems at{" "}
-                  <a href={courses.grameenphone} target="_blank" rel="noreferrer">
-                    Grameenphone Academy
-                  </a>
-                  .
-                </p>
-              </div>
+              <h2 className={styles.aboutTitle}>{about}</h2>
+              <Button href={cv} download>
+                DOWNLOAD CV
+              </Button>
             </div>
             <AboutPattern />
-          </div>
-        </div>
-
-        <div className={styles.yearTrack} data-scroll="pin">
-          <div className={styles.yearFrame}>
-            <div className={styles.years} data-pan>
-              {timeline.map((item) => (
-                <article key={item.year} className={styles.year}>
-                  <div className={styles.yearHead}>
-                    <span className={styles.yearTag} style={{ background: item.color }}>
-                      {item.tag}
-                    </span>
-                    <h3 className={styles.yearText}>{item.year}</h3>
-                    <span className={styles.yearDash} />
-                  </div>
-                  <div className={styles.yearContent}>
-                    <p className={styles.yearInfo}>{item.text}</p>
-                    <div
-                      className={`${styles.yearArt} ${styles[`yearArt_${item.art}`]}`}
-                      aria-hidden="true"
-                    />
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className={styles.process} id="process">
-        <div className={styles.container}>
-          <div className={styles.processHeader}>
-            <h2
-              className={styles.processTitle}
-              data-scroll="enter"
-              aria-label="Discover, design, and hand off"
-            >
-              <Chars text="DISCOVER, DESIGN, AND HAND OFF" />
-            </h2>
-            <p className={styles.processInfo}>
-              A simple, transparent process so you always know what comes next.
-            </p>
-          </div>
-          <div className={styles.steps}>
-            <span className={styles.stepsLine} />
-            {steps.map((step, i) => (
-              <article
-                key={step.number}
-                className={styles.step}
-                tabIndex={0}
-                data-reveal
-                style={{ "--i": i }}
-              >
-                <span className={styles.stepMarker}>
-                  <Pentagon />
-                </span>
-                <div className={styles.stepCard}>
-                  <p className={styles.stepCount}>Step {step.number}</p>
-                  <h3 className={styles.stepTitle}>
-                    <span>{step.title}</span>
-                    <span aria-hidden="true">{step.title}</span>
-                  </h3>
-                  <div className={styles.stepInfoWrap}>
-                    <p className={styles.stepInfo}>{step.text}</p>
-                  </div>
-                  <span className={styles.stepToggle}>
-                    <Chevron size={28} />
-                  </span>
-                </div>
-              </article>
-            ))}
           </div>
         </div>
       </section>
@@ -647,6 +551,52 @@ export default function Home() {
         </ul>
       </section>
 
+      <section className={styles.process} id="process">
+        <div className={styles.container}>
+          <div className={styles.processHeader}>
+            <h2
+              className={styles.processTitle}
+              data-scroll="enter"
+              aria-label="Discover, design, and hand off"
+            >
+              <Chars text="DISCOVER, DESIGN, AND HAND OFF" />
+            </h2>
+            <p className={styles.processInfo}>
+              A simple, transparent process so you always know what comes next.
+            </p>
+          </div>
+          <div className={styles.steps}>
+            <span className={styles.stepsLine} />
+            {steps.map((step, i) => (
+              <article
+                key={step.number}
+                className={styles.step}
+                tabIndex={0}
+                data-reveal
+                style={{ "--i": i }}
+              >
+                <span className={styles.stepMarker}>
+                  <Pentagon />
+                </span>
+                <div className={styles.stepCard}>
+                  <p className={styles.stepCount}>Step {step.number}</p>
+                  <h3 className={styles.stepTitle}>
+                    <span>{step.title}</span>
+                    <span aria-hidden="true">{step.title}</span>
+                  </h3>
+                  <div className={styles.stepInfoWrap}>
+                    <p className={styles.stepInfo}>{step.text}</p>
+                  </div>
+                  <span className={styles.stepToggle}>
+                    <Chevron size={28} />
+                  </span>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className={styles.faq} id="faq">
         <div className={styles.container}>
           <div className={styles.giantHeader}>
@@ -671,6 +621,53 @@ export default function Home() {
                 </div>
               </article>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.journey} id="journey">
+        <div className={styles.container}>
+          <div className={styles.journeyHeader}>
+            <div className={styles.caption}>
+              <span className={styles.captionDot} />
+              <p className={styles.captionText}>Experience and Education</p>
+            </div>
+            <p className={styles.journeyNote}>
+              Also trained in UI/UX Design at{" "}
+              <a href={courses.ostad} target="_blank" rel="noreferrer">
+                Ostad
+              </a>{" "}
+              and Design Systems at{" "}
+              <a href={courses.grameenphone} target="_blank" rel="noreferrer">
+                Grameenphone Academy
+              </a>
+              .
+            </p>
+          </div>
+        </div>
+
+        <div className={styles.yearTrack} data-scroll="pin">
+          <div className={styles.yearFrame}>
+            <div className={styles.years} data-pan>
+              {timeline.map((item) => (
+                <article key={item.year} className={styles.year}>
+                  <div className={styles.yearHead}>
+                    <span className={styles.yearTag} style={{ background: item.color }}>
+                      {item.tag}
+                    </span>
+                    <h3 className={styles.yearText}>{item.year}</h3>
+                    <span className={styles.yearDash} />
+                  </div>
+                  <div className={styles.yearContent}>
+                    <p className={styles.yearInfo}>{item.text}</p>
+                    <div
+                      className={`${styles.yearArt} ${styles[`yearArt_${item.art}`]}`}
+                      aria-hidden="true"
+                    />
+                  </div>
+                </article>
+              ))}
+            </div>
           </div>
         </div>
       </section>
